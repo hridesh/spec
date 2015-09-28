@@ -1,6 +1,6 @@
 package edu.iastate.cs.design.spec.stackexchange.objects;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Post {
     public static final String QUESTION_POST_TYPE = "question";
@@ -11,7 +11,7 @@ public class Post {
 
     private String bodyMarkdown;
 
-    private ArrayList<String> comments;
+    private List<String> comments;
 
     // Number of seconds since 1/1/1970
     private long creationDate;
@@ -55,7 +55,7 @@ public class Post {
         return bodyMarkdown;
     }
 
-    public ArrayList<String> getComments() {
+    public List<String> getComments() {
         return comments;
     }
 
