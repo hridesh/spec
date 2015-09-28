@@ -6,9 +6,6 @@ import com.google.gson.GsonBuilder;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by chanika on 9/23/2015.
- */
 public class BadgeCountTest {
 
     @Test

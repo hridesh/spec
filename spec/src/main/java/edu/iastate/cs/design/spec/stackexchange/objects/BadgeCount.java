@@ -1,8 +1,5 @@
 package edu.iastate.cs.design.spec.stackexchange.objects;
 
-/**
- * Created by chanika on 9/23/2015.
- */
 public class BadgeCount {
 
     private int bronze;
