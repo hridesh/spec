@@ -49,6 +49,17 @@ public class ShallowUser {
         return userType;
     }
 
+    public ShallowUser(int acceptRate, BadgeCount badgeCounts, String displayName, String link, String profileImage, int reputation, int userId, String userType) {
+        this.acceptRate = acceptRate;
+        this.badgeCounts = badgeCounts;
+        this.displayName = displayName;
+        this.link = link;
+        this.profileImage = profileImage;
+        this.reputation = reputation;
+        this.userId = userId;
+        this.userType = userType;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -20,6 +20,12 @@ public class BadgeCount {
         return gold;
     }
 
+    public BadgeCount(int bronze, int silver, int gold) {
+        this.bronze = bronze;
+        this.silver = silver;
+        this.gold = gold;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
