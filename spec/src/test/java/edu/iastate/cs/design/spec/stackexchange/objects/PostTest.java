@@ -3,6 +3,7 @@ package edu.iastate.cs.design.spec.stackexchange.objects;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import edu.iastate.cs.design.spec.stackexchange.parse.StackExchangeObjectParser;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -34,8 +35,7 @@ public class PostTest {
                 "  \"body\": \"question body\",\n" +
                 "  \"comments\": [\"hello\", \"there\", \"needs more jquery\"]\n" +
                 "}";
-        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
-        Post post = gson.fromJson(json, Post.class);
+        Post post = StackExchangeObjectParser.parsePostObject(json);
         ShallowUser expectedOwner = new ShallowUser(55, null, "Example User",
                 "http://example.stackexchange.com/users/1/example-user",
                 "https://www.gravatar.com/avatar/a007be5a61f6aa8f3e85ae2fc18dd66e?d=identicon&r=PG", 9001, 1, User.REGISTERED_USER_TYPE);
